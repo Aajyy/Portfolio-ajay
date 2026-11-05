@@ -18,18 +18,149 @@
 
  /* hero section  */
 
- .hero {
-     display: grid;
-     grid-template-rows: 1fr;
-     padding: 1rem 2rem;
-     padding-top: 1rem;
- }
+ 
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 5%;
+    position: relative;
+    overflow: hidden;
+    background: #f8f8fc;
+}
 
- .hero-text h1 {
-     font-size: 120px;
-     font-weight: 700;
-     color: #222;
- }
+/* BACKGROUND GLOW */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #dcd2ff;
+    filter: blur(120px);
+    border-radius: 50%;
+    right: 10%;
+    top: 10%;
+    opacity: 0.6;
+    animation: glowMove 6s ease-in-out infinite alternate;
+}
+
+/* HERO TEXT */
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    animation: heroReveal 1s ease forwards;
+}
+
+.hero-label {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #6A9DCB;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* MAIN HEADING */
+
+.hero-text h1 {
+    font-size: clamp(45px, 8vw, 100px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: #222;
+    letter-spacing: -3px;
+}
+
+/* ANIMATED TEXT */
+
+.animated-text {
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        #6A9DCB,
+        #9672e8,
+        #222
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 4s linear infinite;
+}
+
+/* DESCRIPTION */
+
+.hero-description {
+    max-width: 550px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+    margin-top: 25px;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #6A9DCB;
+    transform: translateY(-5px);
+}
+
+.hero-link {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid #222;
+    padding-bottom: 5px;
+}
+
+/* ANIMATIONS */
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientMove {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes glowMove {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-60px, 50px);
+    }
+}
+
 .work_name {
     font-size: 20px;
     font-weight:600;

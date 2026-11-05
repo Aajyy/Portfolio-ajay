@@ -208,16 +208,29 @@
   }
 
   /* Hero Section */
-  .hero-text h1 {
-    font-size: 2.2rem;
-    line-height: 1.2;
-    margin-top:100px;
-  }
+.hero {
+        min-height: 75vh;
+        padding: 2rem 20px;
+    }
 
-  .hero {
-    padding: 3rem 1rem;
-  }
+    .hero-text h1 {
+        font-size: 43px;
+        letter-spacing: -1.5px;
+    }
 
+    .hero-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
   /* Projects Section */
   .projects {
     padding: 2rem 1rem;
