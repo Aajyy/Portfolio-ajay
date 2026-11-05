@@ -1,0 +1,96 @@
+
+.intro {
+    position: fixed;
+    inset: 0;
+    background: #f0e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.intro-name {
+    font-size: clamp(2.5rem, 9vw, 7rem);
+    letter-spacing: 8px;
+    opacity: 0;
+}
+
+.intro-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 100px;
+    font-weight: 900;
+    color: #00e5ff;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 30px #00e5ff;
+    transform-style: preserve-3d;
+}
+
+/* HEADER */
+
+.portfolio {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header {
+    width: 100%;
+    padding: 10px 30px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;  
+}
+
+.logo span {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+}
+   
+
+.logo h2 {
+    font-size: 18px;
+}
+
+
+.mail-btn{
+    padding-right:85px !important;
+    text-decoration: none;
+    color: #000;
+    
+}
+
+.header {
+    width: 100%;
+    padding: 10px 30px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #fff;
+
+    transition: transform 0.4s ease-in-out;
+}
+.header.hide-header {
+    transform: translateY(-110%);
+}
