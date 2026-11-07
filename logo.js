@@ -52,7 +52,7 @@ function animateName() {
                 portfolio.style.visibility = "visible";
                 portfolio.style.opacity = "1";
 
-                intro.style.transition = "opacity 0.5s ease";
+                intro.style.transition = "opacity 0.8s ease";
                 intro.style.opacity = "0";
 
                 setTimeout(() => {
