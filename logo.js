@@ -1,4 +1,4 @@
-const intro = document.getElementById("intro");
+const intro = document.getElementById ("intro");
 const introName = document.getElementById("introName");
 const introLogo = document.getElementById("introLogo");
 const portfolio = document.getElementById("portfolio");
@@ -52,7 +52,7 @@ function animateName() {
                 portfolio.style.visibility = "visible";
                 portfolio.style.opacity = "1";
 
-                intro.style.transition = "opacity 0.8s ease";
+                intro.style.transition = "opacity 0.5s ease";
                 intro.style.opacity = "0";
 
                 setTimeout(() => {
