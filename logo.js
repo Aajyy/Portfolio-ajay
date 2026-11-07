@@ -48,7 +48,7 @@ function animateName() {
             // Step 6: Display portfolio
             setTimeout(() => {
 
-                portfolio.style.transition = "opacity 1s ease";
+                portfolio.style.transition = "opacity 0.1s ease";
                 portfolio.style.visibility = "visible";
                 portfolio.style.opacity = "1";
 
